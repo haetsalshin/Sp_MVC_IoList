@@ -1,4 +1,4 @@
-#💻💻 💻IoList Project💻 
+# 💻IoList Project💻 
 
 ##  DB Table을 사용하여 CRUD 구현하기
 
