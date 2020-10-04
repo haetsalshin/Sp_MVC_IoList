@@ -106,9 +106,9 @@
 
         <label>수량<form:input class="flex6" path="io_quan" placeholder="수량" /></label>
       </div>
-
+<%-- 
         <label>합계<form:input class="flex6" path="io_total" placeholder="합계"/></label>
-      </div>
+      </div> --%>
     </section>
     
     <section id="section-btn">

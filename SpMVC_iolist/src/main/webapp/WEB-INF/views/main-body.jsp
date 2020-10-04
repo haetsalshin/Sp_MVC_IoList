@@ -136,7 +136,7 @@ h3 {
 				</c:choose>
 				<c:if test="${i.last}">
 					<tr>
-						<td colspan="7">
+						<td colspan="7">총 매출액/매입액
 						<td>${lists.input_total}</td>
 						<td>${lists.out_total}</td>
 					</tr>

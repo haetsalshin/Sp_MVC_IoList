@@ -2,7 +2,6 @@
     pageEncoding="UTF-8"%>    
 <%@taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
 <c:set var="rootPath" value="${pageContext.request.contextPath}" />    
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
 	<style>
 	table#io-detail{
 		width: 30%;
@@ -98,19 +97,7 @@
 	
 	
 	</style>
-	<script>
-	$(function(){
-		$("#pro_delete").click(function(){
-			if(confirm("${IoListVO.io_pname} \n상품데이터를 삭제합니다.")){
 	
-				document.location.replace("${rootPath}/delete?seq=${IoListVO.seq}");
-			}
-			
-		})
-		
-
-	})
-	</script>
 	
 	
 	<table id="io-detail">

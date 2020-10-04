@@ -43,7 +43,15 @@ public class IoListImplV1 implements IoService {
 	@Override
 	public int insert(IoListVO vo) {
 		
+		int Sum=0;
+		Sum = vo.getIo_price() * vo.getIo_quan();
+		
+		vo.setIo_total(Sum);
+		
+		
 		int ret = ioListDao.insert(vo);
+		
+		
 		
 		if(ret>0) {
 			log.debug("INSERT 성공 {}개의 데이터 추가", ret);

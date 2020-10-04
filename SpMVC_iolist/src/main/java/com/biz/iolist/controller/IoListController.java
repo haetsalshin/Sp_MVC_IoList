@@ -111,32 +111,7 @@ public class IoListController {
 	  return "redirect:/";
 	  }
 	  
-	 
-	/*
-	 * @RequestMapping(value = "/update", method=RequestMethod.GET) public String
-	 * update(String seq, Model model) {
-	 * 
-	 * long long_seq = 0; try { long_seq = Long.valueOf(seq); } catch (Exception e)
-	 * { log.debug("Valueof오류"); }
-	 * 
-	 * 
-	 * IoListVO ioListVO = ioService.findById(long_seq);
-	 * 
-	 * model.addAttribute("IoListVO", ioListVO);
-	 * 
-	 * 
-	 * return "/io/io-write";
-	 * 
-	 * }
-	 * 
-	 * @RequestMapping(value = "/update", method=RequestMethod.POST) public String
-	 * update(IoListVO ioListVO, Model model) { log.debug("UPDATE POST Method");
-	 * log.debug(ioListVO.toString());
-	 * 
-	 * ioService.update(ioListVO); model.addAttribute("seq",ioListVO.getSeq());
-	 * 
-	 * return "redirect:/"; }
-	 */
+
 	  
 	  @RequestMapping(value = "/delete", method=RequestMethod.GET)
 	 public String delete(@RequestParam("seq") String seq) {
