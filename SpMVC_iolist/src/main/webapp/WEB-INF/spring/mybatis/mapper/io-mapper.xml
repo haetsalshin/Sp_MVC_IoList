@@ -14,6 +14,10 @@
  		SELECT * FROM tbl_iolist WHERE seq =#{seq}
  	</select>
  	
+	<select id="FindByDate" >
+ 		SELECT * FROM tbl_iolist WHERE io_date BETWEEN #{io_firstday} AND #{io_lastday}
+ 	
+ 	</select> 
  	
  	<insert id="insert" >
  	

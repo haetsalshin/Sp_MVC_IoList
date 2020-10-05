@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link href="${rootPath}/static/css/homepage-main.css?ver=2020-09-29-004" rel="stylesheet">
+<link href="${rootPath}/static/css/homepage-main.css?ver=2020-09-29-006" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 <script>
     /*  js파일에서 el tag의 ${rootPath}값을 참조하기 위해서
@@ -14,7 +14,7 @@
     	*/
     	var rootPath = "${rootPath}"
     </script>
-<script src="${rootPath}/static/js/main-nav.js?ver=2020-09-29-003"></script>
+<script src="${rootPath}/static/js/main-nav.js?ver=2020-10-05-001"></script>
 <title>매출관리 홈페이지</title>
 <style>
 </style>
@@ -26,29 +26,30 @@
 	</header>
 	<nav>
 		<ul id="main-nav">
-			<li>Home💵</li>
-			<li id="io-list">장부보기💵</li>
-			<li>회원가입💵</li>
-			<li>로그인💵</li>
-			<li>로그아웃💵</li>
+			<li>Home</li>
+			<li id="io-datelist">날짜별보기</li>
+			<li>회원가입</li>
+			<li>로그인</li>
+			<li>로그아웃</li>
 		</ul>
 	</nav>
 	
 	<section id="main-section">
 	<c:choose>
-		<c:when test="${BODY == 'IO-LIST'} }">
-			<%@ include file = "/WEB-INF/views/io/iolist.jsp" %>
-		
-		</c:when>
-		<c:when test="${BODY == 'IO-WRITE'} }">
-			<%@ include file = "/WEB-INF/views/io/io-write.jsp" %>
-		</c:when>
-		
-	<c:otherwise>
-		<%@ include file ="/WEB-INF/views/main-body.jsp" %>
-	
-	</c:otherwise>
-	</c:choose>
+         <c:when test="${BODY == 'IO-LIST'}">
+            <%@ include file="/WEB-INF/views/main-body.jsp" %>
+         </c:when>
+         <c:when test="${BODY =='IO-WRITE'}">
+            <%@ include file="/WEB-INF/views/io/io-write.jsp"%>
+         </c:when>
+         <c:when test="${BODY == 'IO-DETAIL'}">
+            <%@ include file ="/WEB-INF/views/io/io-detail.jsp"%>
+         </c:when>
+         
+         <c:otherwise>
+            <%@ include file ="/WEB-INF/views/main-body.jsp" %>
+         </c:otherwise>
+      </c:choose>
 	
 	</section>
 	<footer>

@@ -41,6 +41,17 @@ public class IoListImplV1 implements IoService {
 	}
 
 	@Override
+	public IoListVO findByDate(String io_firstday, String io_lastday) {
+
+		log.debug("날짜로 검색 성공");
+		
+//		return ioListDao.findByDate(io_firstday, io_lastday);
+		return null;
+	}
+	
+	
+	
+	@Override
 	public int insert(IoListVO vo) {
 		
 		int Sum=0;
@@ -115,6 +126,7 @@ public class IoListImplV1 implements IoService {
 		
 		return ioList;
 	}
+
 	
 	
 }

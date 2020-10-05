@@ -5,17 +5,6 @@
 <c:set var="rootPath" value="${pageContext.request.contextPath}" />    
 
 <style>
-      * {
-        box-sizing: border-box;
-        padding: 0;
-        margin: 0;
-      }
-      body,
-      html { 
-        padding: 20px;
-        margin: 0 auto;
-        width: 60%;
-      }
       section#section-write {
         background-color: rgb(245, 219, 227);
         padding: 20px;
@@ -50,7 +39,7 @@
         border: none;
         color: white;
         border-radius: 5px;
-        align-items: right;
+       
         padding: 5px 8px;
         margin: 8px auto;
         text-align: center;
@@ -118,3 +107,4 @@
       </div>
     </section>
 </form:form>
+

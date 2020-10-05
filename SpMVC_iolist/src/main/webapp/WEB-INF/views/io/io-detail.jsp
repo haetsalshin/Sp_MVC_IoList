@@ -74,12 +74,13 @@
 	
 	#view_menu a {
 		display: inline-block;
-		padding: 8px 16px;
-		margin: 8px 4px;
+		padding: 6px 14px;
+		margin: 6px 4px;
 		text-decoration: none;
 		background-color: #003399;
 		color: white;
 		border-radius: 5px;
+		align-items: right;
 		
 	}
 	#view_menu a:nth-child(1){
@@ -94,7 +95,6 @@
 		background-color: #ddd;
 		color: black;
 	}
-	
 	
 	</style>
 	

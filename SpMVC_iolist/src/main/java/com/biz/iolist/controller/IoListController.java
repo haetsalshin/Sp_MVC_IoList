@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,7 +35,7 @@ public class IoListController {
 		model.addAttribute("LISTS", ioList);
 		model.addAttribute("BODY", "IO-LIST");
 
-		return "/home";
+		return "home";
 	}
 
 	@RequestMapping(value = "/input", method = RequestMethod.GET)
@@ -47,7 +46,8 @@ public class IoListController {
 
 		
 		
-		return "/io/io-write";
+		return "home";
+
 
 	}
 
@@ -72,6 +72,18 @@ public class IoListController {
 		}
 		return "redirect:/";
 	}
+	
+	@RequestMapping(value = "/datelist",method=RequestMethod.GET)
+	public String datelist(String io_firstday, String io_lastday, Model model) {
+		
+//		IoListVO ioListVO = ioService.findByDate(io_firstday, io_lastday);
+//		
+		model.addAttribute("BODY", "IO-DATELIST");
+		
+		
+		return "home";
+		
+	}
 
 	@RequestMapping(value = "/detail/{io_seq}", method = RequestMethod.GET)
 	public String detail(@PathVariable("io_seq") String id, Model model) {
@@ -84,7 +96,7 @@ public class IoListController {
 		model.addAttribute("IoListVO", ioListVO);
 		model.addAttribute("BODY", "IO-DETAIL");
 
-		return "/io/io-detail";
+		return "home";
 	}
 
 	
@@ -100,7 +112,7 @@ public class IoListController {
 	  model.addAttribute("BODY", "IO-WRITE");
 	  
 	  
-	  return "/io/io-write"; 
+	  return "home"; 
 	  }
 	  
 	  @RequestMapping(value = "/update", method=RequestMethod.POST) public String

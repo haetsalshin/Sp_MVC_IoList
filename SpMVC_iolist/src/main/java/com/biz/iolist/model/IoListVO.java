@@ -28,5 +28,8 @@ public class IoListVO {
 	
 	private long input_total;
 	private long out_total;
+	
+	private String io_firstday;
+	private String io_lastday;
 
 }
